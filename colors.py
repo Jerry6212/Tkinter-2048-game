@@ -1,13 +1,13 @@
-grid_color = "#a39489"
-empty_cell_color = "#c2b3a9"
-score_label_font = ("Verdana", 24)
-score_font = ("Helvetica", 36, "bold")
-game_over_font = ("Helvetica", 48, "bold")
-game_over_font_color = "#ffffff"
-winner_bg = "#ffcc00"
-loser_bg = "#a39489"
+GRID_COLOR = "#a39489"
+EMPTY_CELL_COLOR = "#c2b3a9"
+SCORE_LABEL_FONT = ("Verdana", 20)
+SCORE_FONT = ("Helvetica", 32, "bold")
+GAME_OVER_FONT = ("Helvetica", 48, "bold")
+GAME_OVER_FONT_COLOR = "#ffffff"
+WINNER_BG = "#ffcc00"
+LOSER_BG = "#a39489"
 
-cell_colors = {
+CELL_COLORS = {
     2: "#fcefe6",
     4: "#f2e8cb",
     8: "#f5b682",
@@ -16,12 +16,12 @@ cell_colors = {
     64: "#e64c2e",
     128: "#ede291",
     256: "#fce130",
-    512: "#ffbd4a",
+    512: "#ffdb4a",
     1024: "#f0b922",
     2048: "#fad74d"
 }
 
-cell_number_colors = {
+CELL_NUMBER_COLORS = {
     2: "#695c57",
     4: "#695c57",
     8: "#ffffff",
@@ -34,7 +34,8 @@ cell_number_colors = {
     1024: "#ffffff",
     2048: "#ffffff"
 }
-cell_number_fonts = {
+
+CELL_NUMBER_FONTS = {
     2: ("Helvetica", 55, "bold"),
     4: ("Helvetica", 55, "bold"),
     8: ("Helvetica", 55, "bold"),
@@ -46,5 +47,4 @@ cell_number_fonts = {
     512: ("Helvetica", 45, "bold"),
     1024: ("Helvetica", 40, "bold"),
     2048: ("Helvetica", 40, "bold")
-
 }
