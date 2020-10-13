@@ -19,14 +19,18 @@ class Game(tk.Frame):
         self.master.bind("<Right>", self.right)
         self.master.bind("<Up>", self.up)
         self.master.bind("<Down>", self.down)
-        #reset_button = tk.Button(self, text="Reset", command=self.click_reset_button)
-        #reset_button.place(x=0, y=0)
+        reset_button = tk.Button(self, text="Reset", command=self.click_reset_button)
+        reset_button.place(x=0, y=0)
         self.mainloop()
 
-    #def click_reset_button(self):
-        #self.game_over()
-        #self.start_game()
-        #self.update_GUI()
+    # Reset button works but if previous game was loss "GAME OVER" shows in background
+    def click_reset_button(self):
+        self.game_over()
+        self.start_game()
+        self.make_GUI()
+        self.stack()
+        self.update_GUI()
+
     def make_GUI(self):
         # make grid
         self.cells = []
@@ -194,7 +198,7 @@ class Game(tk.Frame):
         self.game_over()
 
     # Check if any moves are possible
-
+    # Crashes are happening when player tries invalid move when new tile can't be placed
     def horizontal_move_exists(self):
         for i in range(4):
             for j in range(3):
@@ -231,6 +235,7 @@ class Game(tk.Frame):
                 bg=c.LOSER_BG,
                 fg=c.GAME_OVER_FONT_COLOR,
                 font=c.GAME_OVER_FONT).pack()
+            # game_over_frame.after(1000, game_over_frame.destroy())
 
 
 def main():
